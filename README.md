@@ -263,11 +263,10 @@ GROUP BY product_subcategory
 ORDER BY total_products DESC, product_subcategory ASC;
 
 20.	Show the product_id(s), the sum of quantities, where the total sum of its product quantities is greater than or equal to 100.
+
 SELECT product_id, SUM(quantity) as total_quantity
 FROM product
 JOIN order_details
 USING(product_id)
 GROUP BY product_id
-HAVING SUM(quantity)>=100;
-
-![image](https://user-images.githubusercontent.com/67070047/222969872-a8472fc0-6b12-4c9c-ba27-d56fe7020549.png)
+HAVING SUM(quantity =>100;
