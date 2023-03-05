@@ -37,12 +37,6 @@ LIMIT 1;
  
 OUTPUT: 14753
  
- 
- 
-
-
-
-
 
 4. How many different cities do we have in the data?
  
@@ -216,8 +210,12 @@ SELECT customer_name, COUNT(*) as Total_customers
 FROM customers
 WHERE customer_segment IN ('Consumer','Corporate')
 GROUP BY 1;
+
 Output:  647 rows (total count) with number of rows
+
+
 16.	Calculate the difference between the largest and smallest order quantities for product id ‘100.’
+
 SELECT (MAX(quantity)-MIN(quantity)) as Diff
 FROM order_details
 JOIN product
